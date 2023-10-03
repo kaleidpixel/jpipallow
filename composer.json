@@ -1,0 +1,26 @@
+{
+    "name": "kaleidpixel/jpipallow",
+    "description": "A tool designed to generate a .htaccess file that exclusively allows access from Japanese IP addresses, ensuring web content is accessible only within Japan.",
+    "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "k4zuki02h4t4",
+            "email": "7222225+k4zuki02h4t4@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3||^8.0",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "kaleidpixel\\": "src/"
+        }
+    }
+}
