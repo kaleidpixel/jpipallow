@@ -6,7 +6,7 @@
  * @author     KAZUKI Otsuhata
  * @copyright  2023 (C) Kaleid Pixel
  * @license    MIT License
- * @version    0.0.1
+ * @version    1.0.0
  **/
 
 namespace kaleidpixel;
@@ -26,26 +26,31 @@ class JPIPAllow {
 
 	/**
 	 * @var string
+	 * @since 1.0.0
 	 */
 	protected $now = '';
 
 	/**
 	 * @var string
+	 * @since 1.0.0
 	 */
 	protected $server = '';
 
 	/**
 	 * @var string
+	 * @since 1.0.0
 	 */
 	protected $output_path = '';
 
 	/**
 	 * @var string
+	 * @since 1.0.0
 	 */
 	protected $add_before_str = '';
 
 	/**
 	 * @var string
+	 * @since 1.0.0
 	 */
 	protected $add_after_str = '';
 
@@ -77,6 +82,7 @@ class JPIPAllow {
 	 * Wrapper method for the constant IP_LIST_ENDPOINTS.
 	 *
 	 * @return string[]
+	 * @since 1.0.0
 	 */
 	public static function ipListEndPoints(): array {
 		return self::IP_LIST_ENDPOINTS;
@@ -88,6 +94,7 @@ class JPIPAllow {
 	 * @param int $range
 	 *
 	 * @return int
+	 * @since 1.0.0
 	 */
 	public static function getCIDRRangeIPv4( int $range = 0 ): int {
 		return 32 - log( $range, 2 );
@@ -98,6 +105,7 @@ class JPIPAllow {
 	 * @see https://stackoverflow.com/questions/933367/php-how-to-best-determine-if-the-current-invocation-is-from-cli-or-web-server
 	 *
 	 * @return bool
+	 * @since 1.0.0
 	 */
 	public static function is_cli(): bool {
 		if ( defined( 'STDIN' ) ) {
@@ -136,6 +144,7 @@ class JPIPAllow {
 	 * @param array  $data
 	 *
 	 * @return array
+	 * @since 1.0.0
 	 */
 	public static function curl_get_content( string $url = '', array $header = [], string $method = 'GET', array $data = [] ): array {
 		$result = array();
@@ -188,6 +197,7 @@ class JPIPAllow {
 	 * @param string|null $mime_type
 	 *
 	 * @return void
+	 * @since 1.0.0
 	 */
 	public static function download( string $file_path = '', string $mime_type = null ): void {
 		if ( !is_readable( $file_path ) ) {
@@ -221,6 +231,7 @@ class JPIPAllow {
 	 * @param bool $force
 	 *
 	 * @return void
+	 * @since 1.0.0
 	 */
 	public function output( bool $echo = false, bool $force = false ) {
 		$contents = $this->create( $force );
@@ -242,6 +253,7 @@ class JPIPAllow {
 	 * @param bool $force
 	 *
 	 * @return array
+	 * @since 1.0.0
 	 */
 	protected function create( bool $force = false ): array {
 		$create = false;
@@ -285,6 +297,7 @@ class JPIPAllow {
 	 * Get IP Allow List
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getIpAllowList(): string {
 		if ( mb_strtolower( $this->server ) !== 'nginx' ) {
@@ -331,6 +344,7 @@ EOL;
 	 * Get Google IP Allow List.
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getGoogleIpAllowList(): string {
 		return $this->addGoogleIpAllowList(
@@ -348,6 +362,7 @@ EOL;
 	 * Get Googlebot IP Allow List.
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getGooglebotIpAllowList(): string {
 		return $this->addGoogleIpAllowList(
@@ -365,6 +380,7 @@ EOL;
 	 * Get Google special crawler IP Allow List.
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getGoogleSpecialCrawlerIpAllowList(): string {
 		return $this->addGoogleIpAllowList(
@@ -382,6 +398,7 @@ EOL;
 	 * Get Google user triggered fetchers IP Allow List.
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getGoogleUserTriggeredFetchersIpAllowList(): string {
 		return $this->addGoogleIpAllowList(
@@ -402,6 +419,7 @@ EOL;
 	 * @param array  $header
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function addGoogleIpAllowList( string $endpoint, array $header ): string {
 		$contents = $this->curl_get_content( $endpoint );
@@ -440,6 +458,7 @@ EOL;
 	 * Get Japan IP Allow List.
 	 *
 	 * @return string
+	 * @since 1.0.0
 	 */
 	protected function getJpIpAllow(): string {
 		$contents = $this->curl_get_content( $this->ipListEndPoints()['apnic'] );

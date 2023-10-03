@@ -2,7 +2,7 @@
     "name": "kaleidpixel/jpipallow",
     "description": "A tool designed to generate a .htaccess file that exclusively allows access from Japanese IP addresses, ensuring web content is accessible only within Japan.",
     "type": "library",
-    "minimum-stability": "stable",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
