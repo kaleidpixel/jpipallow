@@ -7,7 +7,9 @@
     "authors": [
         {
             "name": "k4zuki02h4t4",
-            "email": "7222225+k4zuki02h4t4@users.noreply.github.com"
+            "email": "7222225+k4zuki02h4t4@users.noreply.github.com",
+            "homepage": "https://www.kaleidpixel.jp",
+            "role": "Developer"
         }
     ],
     "require": {
