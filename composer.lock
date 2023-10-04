@@ -1,0 +1,73 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "28e9e93f2ba107c8f119bce957ac4709",
+    "packages": [
+        {
+            "name": "kaleidpixel/geoipallow",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kaleidpixel/geoipallow.git",
+                "reference": "a17948a85c6614729658eb44377643efa06a6cfa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kaleidpixel/geoipallow/zipball/a17948a85c6614729658eb44377643efa06a6cfa",
+                "reference": "a17948a85c6614729658eb44377643efa06a6cfa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-fileinfo": "*",
+                "ext-intl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": "^7.3||^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "kaleidpixel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "k4zuki02h4t4",
+                    "email": "7222225+k4zuki02h4t4@users.noreply.github.com",
+                    "homepage": "https://www.kaleidpixel.jp",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A streamlined tool designed to generate .htaccess configurations, allowing web access exclusively from IP addresses of a specified country. Enhance your site's security and target your audience more effectively.",
+            "support": {
+                "issues": "https://github.com/kaleidpixel/geoipallow/issues",
+                "source": "https://github.com/kaleidpixel/geoipallow/tree/v1.0.0"
+            },
+            "time": "2023-10-04T14:39:24+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.3||^8.0",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

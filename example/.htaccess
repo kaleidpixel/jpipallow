@@ -1,7 +1,8 @@
-######################################################
-# Restrict access to IP addresses within Japan only. #
-# add 2023-10-03                                     #
-######################################################
+### ADD kaleidpixel\GeoIPAllow ###
+###################################################
+# Restrict access to IP addresses within JP only. #
+# add 2023-10-05                                  #
+###################################################
 SetEnvIf User-Agent "msnbot" allowbot
 SetEnvIf User-Agent "bingbot" allowbot
 
@@ -12,7 +13,9 @@ Deny from All
 Allow from env=allowbot
 
 ## Private IP Address
-Allow from localhost
+Allow from 127.0.0.1
+Allow from 10.0.0.0/8
+Allow from 172.16.0.0/12
 Allow from 192.168.0.0/16
 
 ## IP address of its In-House server.
@@ -527,6 +530,7 @@ Allow from 34.64.6.96/27
 Allow from 34.98.136.0/27
 Allow from 34.98.136.128/27
 Allow from 34.98.136.160/27
+Allow from 34.98.136.192/27
 Allow from 34.98.136.32/27
 Allow from 34.98.136.64/27
 Allow from 34.98.136.96/27
@@ -704,7 +708,7 @@ Allow from 35.243.23.64/27
 Allow from 35.243.23.96/27
 
 ############################
-# Japan IP Address Ranges
+# Geo IP Address Ranges
 # https://ftp.apnic.net/stats/apnic/delegated-apnic-latest
 ############################
 Allow from 1.0.16.0/20
@@ -1634,7 +1638,6 @@ Allow from 103.60.224.0/22
 Allow from 103.61.151.0/24
 Allow from 103.61.244.0/22
 Allow from 103.62.244.0/22
-Allow from 103.63.220.0/22
 Allow from 103.63.224.0/22
 Allow from 103.64.132.0/22
 Allow from 103.65.44.0/22
@@ -5233,3 +5236,4 @@ Allow from 223.223.224.0/19
 Allow from 223.252.64.0/19
 Allow from 223.252.112.0/20
 
+### END kaleidpixel\GeoIPAllow ###

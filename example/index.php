@@ -1,5 +1,6 @@
 <?php
-require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'src/JPIPAllow.php';
+require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'JPIPAllow.php';
 
 use kaleidpixel\JPIPAllow;
 
@@ -18,4 +19,4 @@ $ip = new JPIPAllow(
 	]
 );
 
-$ip->output();
+$ip->read();

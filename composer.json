@@ -18,7 +18,8 @@
         "ext-mbstring": "*",
         "ext-curl": "*",
         "ext-json": "*",
-        "ext-fileinfo": "*"
+        "ext-fileinfo": "*",
+        "kaleidpixel/geoipallow": "^1.0"
     },
     "autoload": {
         "psr-4": {
