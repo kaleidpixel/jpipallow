@@ -1,10 +1,13 @@
 <?php
+/**
+ * This is a sample source, so it directly requires files within the src directory as well,
+ * but in reality, you would only require the autoload.php from the vendor directory.
+ */
 require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'JPIPAllow.php';
 
 use kaleidpixel\JPIPAllow;
 
-$now        = date( 'Y-m-d' );
 $before_str = <<<EOL
 ## IP address of its In-House server.
 Allow from 103.xxx.xxx.xxx

@@ -33,11 +33,10 @@ What follows is the simplest coding.
 
 ```php
 <?php
-require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'src/JPIPAllow.php';
+require_once dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 use kaleidpixel\JPIPAllow;
 
-$now        = date( 'Y-m-d' );
 $before_str = <<<EOL
 ## IP address of its In-House server.
 Allow from 103.xxx.xxx.xxx
@@ -52,7 +51,7 @@ $ip = new JPIPAllow(
 	]
 );
 
-$ip->output(true);
+$ip->read(true);
 
 ```
 
